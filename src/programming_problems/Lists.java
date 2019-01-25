@@ -1,7 +1,5 @@
 package programming_problems;
 
-import java.util.*;
-
 
 public class Lists {
 	
