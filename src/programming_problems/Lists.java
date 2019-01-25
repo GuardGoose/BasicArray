@@ -1,8 +1,21 @@
 package programming_problems;
 
+import java.util.*;
+
+
 public class Lists {
 	
 
+	public static void display(int[] a) {
+		// Function to display arrays
+		for(int i = 0; i < a.length; i++)
+		{
+			// Prints each value on a new line
+			System.out.println(a[i]);
+		}
+	}
+	
+	
 	public static int Largest(int[] a) {
 		// int[] a being the list and total being the size
 		int temp; // Temp value for counter
@@ -29,15 +42,35 @@ public class Lists {
 		return a[total - 1];
 	
 	}
-
+	
+	
+	public static int[] Reverse(int[] a) {
+		
+		int[] rList = new int[a.length];
+		
+		// Loops through all the elements
+		// i is input array
+		// j is reverse array, one less than input array
+		for(int i = 0, j = rList.length - 1; i < a.length; i++, j--)
+		{
+			// Stores the values of the array in reverse order
+			rList[j] = a[i];
+		}
+		return rList;
+	}
+	
+	
+	
 	public static void main(String[] args) {
 		int a[] = {12, 3, 54, 4, 2, 88, 23};
 		int b[] = {1, 23, 43, 23, 33, 44, 2};
 		int c[] = {23, 3, 1, 7777, 666, 45};
+		int[] revA = Reverse(a);
 		
 		System.out.println("Largest: " + Largest(a));
-		//System.out.println("Largest: " + Largest(b, 7));
-		//System.out.println("Largest: " + Largest(c, 6));
+		System.out.println("Largest: " + Largest(b));
+		System.out.println("Largest: " + Largest(c));
+		display(revA);
 
 	}
 	
