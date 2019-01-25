@@ -16,6 +16,27 @@ public class Lists {
 	}
 	
 	
+	public static int[] oddList(int[] a) {
+		
+		int total = a.length/2;
+		int oList[] = new int[total];
+		
+		for (int i = 0; i < total; i++)
+		{
+			for(int j = i + 1; j < total; j++)
+			{
+				// if the index is odd
+				if(i % 2 != 0)
+				{
+					// Add the value at the index
+					// To the new list
+					oList[j] = a[i];
+				}
+			}
+		}
+		return oList;
+	}
+	
 	public static int Largest(int[] a) {
 		// int[] a being the list and total being the size
 		int temp; // Temp value for counter
@@ -63,14 +84,16 @@ public class Lists {
 	
 	public static void main(String[] args) {
 		int a[] = {12, 3, 54, 4, 2, 88, 23};
-		int b[] = {1, 23, 43, 23, 33, 44, 2};
+		int b[] = {1, 23, 43, 28, 33, 44, 2};
 		int c[] = {23, 3, 1, 7777, 666, 45};
 		int[] revA = Reverse(a);
+		int[] oddB = oddList(b);
 		
 		System.out.println("Largest: " + Largest(a));
 		System.out.println("Largest: " + Largest(b));
 		System.out.println("Largest: " + Largest(c));
-		display(revA);
+		//display(revA);
+		display(oddB);
 
 	}
 	
