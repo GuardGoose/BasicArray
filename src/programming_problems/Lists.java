@@ -23,7 +23,7 @@ public class Lists {
 		
 		for (int i = 0; i < total; i++)
 		{
-			for(int j = i + 1; j < total; j++)
+			for(int j = total - i -1; j < total; j++)
 			{
 				// if the index is odd
 				if(i % 2 != 0)
